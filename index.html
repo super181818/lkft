@@ -1,12 +1,16 @@
 <html ng-app="app">
 <head>
     <meta charset="utf-8">
-    <base href="http://x-c-w-3.oss-cn-hangzhou.aliyuncs.com"/>
+    <base href="http://xcwgf2.oss-cn-hangzhou.aliyuncs.com"/>
     <meta name="viewport"
           content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta name="format-detection" content="telephone=no"/>
     <meta name="msapplication-tap-highlight" content="no"/>
     <title>加载中...</title>
+    <link rel="stylesheet" type="text/css" href="/files/css/loading.css?v=2">
+    <link rel="stylesheet" type="text/css" href="/files/css/alert.css?v=2">
+    <link rel="stylesheet" type="text/css" href="/files/css/page.css?v=2">
+    <link rel="stylesheet" type="text/css" href="/files/css/hall_yh2.css?v=2">	
     <script type="text/javascript">
                 var _thost = 'http://' + window.location.host;
         var pathArr = window.location.pathname.split("/");
@@ -19,11 +23,10 @@
         }
         var _tt = new Date().getTime();
         document.write('<script type="text/javascript" src="' + _thost + '/js/config.js?v=1' + _tt + '"> <\/script>');
-        document.write('<script type="text/javascript" src="/js/load.js?v=11101"> <\/script>');
     </script>
     <script>
         function onBridgeReady() {
-            // WeixinJSBridge.call('hideOptionMenu');
+            // WeixinJSBridge.call('hideOptionMenu');ju
         }
 
         if (typeof WeixinJSBridge == "undefined") {
@@ -38,6 +41,8 @@
         }
 
     </script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
 </head>
 
 <body ng-controller="myCtrl" style="background: #000;">
@@ -331,6 +336,12 @@
                                      ng-show="createInfo.bbullx.max_count_type==9"/>
                                 <div class="selectText">21</div>
                             </div>
+                            <div class="selectItem" style="margin-left: 1.5vh" ng-click="selectChange(7,10)">
+                                <div class="selectBox"></div>
+                                <img src="/files/images/common/tick_yh.png"
+                                     ng-show="createInfo.bbullx.max_count_type==10"/>
+                                <div class="selectText">23</div>
+                            </div> 
                         </div>
                     </div>
                     <div class="selectPart f-cb">
@@ -472,6 +483,16 @@
                                     <option value="8">8</option>
                                     <option value="9">9</option>
                                     <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>  
                                 </select>
                                 <div class="text" style="float: left;">癞子</div>
                             </div>
@@ -517,6 +538,9 @@
                                 <div class="selectText selectText2" ng-show="createInfo.bbullx.max_count_type==9">
                                     {{bullSpendCard[0][9]}}
                                 </div>
+                                <div class="selectText selectText2" ng-show="createInfo.bbullx.max_count_type==10">
+                                    {{bullSpendCard[0][10]}}
+                                </div>   
                             </div>
                             <div class="selectItem" ng-click="selectChange(4,2)">
                                 <div class="selectBox"></div>
@@ -548,6 +572,9 @@
                                 </div>
                                 <div class="selectText selectText2" ng-show="createInfo.bbullx.max_count_type==9">
                                     {{bullSpendCard[1][9]}}
+                                </div>
+                                <div class="selectText selectText2" ng-show="createInfo.bbullx.max_count_type==10">
+                                    {{bullSpendCard[1][10]}}
                                 </div>
                             </div>
                         </div>
@@ -829,6 +856,16 @@
                                     <option value="8">8</option>
                                     <option value="9">9</option>
                                     <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option> 
                                 </select>
                                 <div class="text" style="float: left;">癞子(万能牌)</div>
                             </div>
@@ -1175,6 +1212,16 @@
                                     <option value="8">8</option>
                                     <option value="9">9</option>
                                     <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option> 
                                 </select>
                                 <div class="text" style="float: left;">癞子(万能牌)</div>
                             </div>
@@ -1521,6 +1568,16 @@
                                     <option value="8">8</option>
                                     <option value="9">9</option>
                                     <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option> 
                                 </select>
                                 <div class="text" style="float: left;">癞子(万能牌)</div>
                             </div>
@@ -1867,6 +1924,16 @@
                                     <option value="8">8</option>
                                     <option value="9">9</option>
                                     <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option> 
                                 </select>
                                 <div class="text" style="float: left;">癞子(万能牌)</div>
                             </div>
@@ -2213,6 +2280,16 @@
                                     <option value="8">8</option>
                                     <option value="9">9</option>
                                     <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option> 
                                 </select>
                                 <div class="text" style="float: left;">癞子(万能牌)</div>
                             </div>
@@ -5535,387 +5612,387 @@
 
                 <div class="game-num" ng-if="g.max_count!=''&&g.max_count==6">
 
-                    <img ng-if="!g.gamers[0]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[0]" src="/files/images/club2/empty.png"
                          class="nogamer gamer2" style="left: 50%;transform: translateX(-50%);">
-                    <img ng-if="g.gamers[0]" ng-src="{{g.gamers[0].headimgurl}}" class="gamer gamer2"
+                    <img ng-if="g.m[0]" ng-src="{{g.m[0].headimgurl}}" class="gamer gamer2"
                          style="left: 50%;transform: translateX(-50%);">
 
-                    <img ng-if="!g.gamers[1]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[1]" src="/files/images/club2/empty.png"
                          class="nogamer gamer5">
-                    <img ng-if="g.gamers[1]" ng-src="{{g.gamers[1].headimgurl}}" class="gamer gamer5">
+                    <img ng-if="g.m[1]" ng-src="{{g.m[1].headimgurl}}" class="gamer gamer5">
 
-                    <img ng-if="!g.gamers[2]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[2]" src="/files/images/club2/empty.png"
                          class="nogamer gamer8">
-                    <img ng-if="g.gamers[2]" ng-src="{{g.gamers[2].headimgurl}}" class="gamer gamer8">
+                    <img ng-if="g.m[2]" ng-src="{{g.m[2].headimgurl}}" class="gamer gamer8">
 
-                    <img ng-if="!g.gamers[3]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[3]" src="/files/images/club2/empty.png"
                          class="nogamer gamer11">
-                    <img ng-if="g.gamers[3]" ng-src="{{g.gamers[3].headimgurl}}" class="gamer gamer12">
+                    <img ng-if="g.m[3]" ng-src="{{g.m[3].headimgurl}}" class="gamer gamer12">
 
 
-                    <img ng-if="!g.gamers[4]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[4]" src="/files/images/club2/empty.png"
                          class="nogamer gamer14">
-                    <img ng-if="g.gamers[4]" ng-src="{{g.gamers[4].headimgurl}}" class="gamer gamer14">
+                    <img ng-if="g.m[4]" ng-src="{{g.m[4].headimgurl}}" class="gamer gamer14">
 
-                    <img ng-if="!g.gamers[5]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[5]" src="/files/images/club2/empty.png"
                          class="nogamer gamer17">
-                    <img ng-if="g.gamers[5]" ng-src="{{g.gamers[5].headimgurl}}" class="gamer gamer17">
+                    <img ng-if="g.m[5]" ng-src="{{g.m[5].headimgurl}}" class="gamer gamer17">
 
                 </div>
                 <div class="game-num" ng-if="g.max_count!=''&&g.max_count==8">
 
-                    <img ng-if="!g.gamers[0]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[0]" src="/files/images/club2/empty.png"
                          class="nogamer gamer2">
-                    <img ng-if="g.gamers[0]" ng-src="{{g.gamers[0].headimgurl}}" class="gamer gamer2">
+                    <img ng-if="g.m[0]" ng-src="{{g.m[0].headimgurl}}" class="gamer gamer2">
 
-                    <img ng-if="!g.gamers[1]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[1]" src="/files/images/club2/empty.png"
                          class="nogamer gamer3">
-                    <img ng-if="g.gamers[1]" ng-src="{{g.gamers[1].headimgurl}}" class="gamer gamer3">
+                    <img ng-if="g.m[1]" ng-src="{{g.m[1].headimgurl}}" class="gamer gamer3">
 
-                    <img ng-if="!g.gamers[2]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[2]" src="/files/images/club2/empty.png"
                          class="nogamer gamer6">
-                    <img ng-if="g.gamers[2]" ng-src="{{g.gamers[2].headimgurl}}" class="gamer gamer4">
+                    <img ng-if="g.m[2]" ng-src="{{g.m[2].headimgurl}}" class="gamer gamer4">
 
 
-                    <img ng-if="!g.gamers[3]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[3]" src="/files/images/club2/empty.png"
                          class="nogamer gamer8">
-                    <img ng-if="g.gamers[3]" ng-src="{{g.gamers[3].headimgurl}}" class="gamer gamer7">
+                    <img ng-if="g.m[3]" ng-src="{{g.m[3].headimgurl}}" class="gamer gamer7">
 
-                    <img ng-if="!g.gamers[4]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[4]" src="/files/images/club2/empty.png"
                          class="nogamer gamer10">
-                    <img ng-if="g.gamers[4]" ng-src="{{g.gamers[4].headimgurl}}" class="gamer gamer9">
+                    <img ng-if="g.m[4]" ng-src="{{g.m[4].headimgurl}}" class="gamer gamer9">
 
-                    <img ng-if="!g.gamers[5]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[5]" src="/files/images/club2/empty.png"
                          class="nogamer gamer12">
-                    <img ng-if="g.gamers[5]" ng-src="{{g.gamers[5].headimgurl}}" class="gamer gamer11">
+                    <img ng-if="g.m[5]" ng-src="{{g.m[5].headimgurl}}" class="gamer gamer11">
 
-                    <img ng-if="!g.gamers[6]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[6]" src="/files/images/club2/empty.png"
                          class="nogamer gamer14">
-                    <img ng-if="g.gamers[6]" ng-src="{{g.gamers[6].headimgurl}}" class="gamer gamer13">
+                    <img ng-if="g.m[6]" ng-src="{{g.m[6].headimgurl}}" class="gamer gamer13">
 
 
-                    <img ng-if="!g.gamers[7]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[7]" src="/files/images/club2/empty.png"
                          class="nogamer gamer16">
-                    <img ng-if="g.gamers[7]" ng-src="{{g.gamers[7].headimgurl}}" class="gamer gamer15">
+                    <img ng-if="g.m[7]" ng-src="{{g.m[7].headimgurl}}" class="gamer gamer15">
 
 
                 </div>
                 <div class="game-num" ng-if="g.max_count!=''&&g.max_count==9">
-                    <img ng-if="!g.gamers[0]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[0]" src="/files/images/club2/empty.png"
                          class="nogamer gamer2">
-                    <img ng-if="g.gamers[0]" ng-src="{{g.gamers[0].headimgurl}}" class="gamer gamer2">
+                    <img ng-if="g.m[0]" ng-src="{{g.m[0].headimgurl}}" class="gamer gamer2">
 
-                    <img ng-if="!g.gamers[1]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[1]" src="/files/images/club2/empty.png"
                          class="nogamer gamer3">
-                    <img ng-if="g.gamers[1]" ng-src="{{g.gamers[1].headimgurl}}" class="gamer gamer3">
+                    <img ng-if="g.m[1]" ng-src="{{g.m[1].headimgurl}}" class="gamer gamer3">
 
-                    <img ng-if="!g.gamers[2]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[2]" src="/files/images/club2/empty.png"
                          class="nogamer gamer6">
-                    <img ng-if="g.gamers[2]" ng-src="{{g.gamers[2].headimgurl}}" class="gamer gamer7">
+                    <img ng-if="g.m[2]" ng-src="{{g.m[2].headimgurl}}" class="gamer gamer7">
 
-                    <img ng-if="!g.gamers[3]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[3]" src="/files/images/club2/empty.png"
                          class="nogamer gamer8">
-                    <img ng-if="g.gamers[3]" ng-src="{{g.gamers[3].headimgurl}}" class="gamer gamer8">
+                    <img ng-if="g.m[3]" ng-src="{{g.m[3].headimgurl}}" class="gamer gamer8">
 
-                    <img ng-if="!g.gamers[4]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[4]" src="/files/images/club2/empty.png"
                          class="nogamer gamer10">
-                    <img ng-if="g.gamers[4]" ng-src="{{g.gamers[4].headimgurl}}" class="gamer gamer10">
+                    <img ng-if="g.m[4]" ng-src="{{g.m[4].headimgurl}}" class="gamer gamer10">
 
-                    <img ng-if="!g.gamers[5]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[5]" src="/files/images/club2/empty.png"
                          class="nogamer gamer11">
-                    <img ng-if="g.gamers[5]" ng-src="{{g.gamers[5].headimgurl}}" class="gamer gamer11">
+                    <img ng-if="g.m[5]" ng-src="{{g.m[5].headimgurl}}" class="gamer gamer11">
 
-                    <img ng-if="!g.gamers[6]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[6]" src="/files/images/club2/empty.png"
                          class="nogamer gamer12">
-                    <img ng-if="g.gamers[6]" ng-src="{{g.gamers[6].headimgurl}}" class="gamer gamer12">
+                    <img ng-if="g.m[6]" ng-src="{{g.m[6].headimgurl}}" class="gamer gamer12">
 
 
-                    <img ng-if="!g.gamers[7]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[7]" src="/files/images/club2/empty.png"
                          class="nogamer gamer14">
-                    <img ng-if="g.gamers[7]" ng-src="{{g.gamers[7].headimgurl}}" class="gamer gamer14">
+                    <img ng-if="g.m[7]" ng-src="{{g.m[7].headimgurl}}" class="gamer gamer14">
 
-                    <img ng-if="!g.gamers[8]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[8]" src="/files/images/club2/empty.png"
                          class="nogamer gamer16">
-                    <img ng-if="g.gamers[8]" ng-src="{{g.gamers[8].headimgurl}}" class="gamer gamer16">
+                    <img ng-if="g.m[8]" ng-src="{{g.m[8].headimgurl}}" class="gamer gamer16">
 
                 </div>
                 <div class="game-num" ng-if="g.max_count!=''&&g.max_count==10">
-                    <img ng-if="!g.gamers[0]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[0]" src="/files/images/club2/empty.png"
                          class="nogamer gamer2" style="top: 6%;left: 20%;">
-                    <img ng-if="g.gamers[0]" ng-src="{{g.gamers[0].headimgurl}}" class="gamer gamer2">
+                    <img ng-if="g.m[0]" ng-src="{{g.m[0].headimgurl}}" class="gamer gamer2">
 
-                    <img ng-if="!g.gamers[1]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[1]" src="/files/images/club2/empty.png"
                          class="nogamer gamer3" style="top: 6%;right: 20%;">
-                    <img ng-if="g.gamers[1]" ng-src="{{g.gamers[1].headimgurl}}" class="gamer gamer3">
+                    <img ng-if="g.m[1]" ng-src="{{g.m[1].headimgurl}}" class="gamer gamer3">
 
-                    <img ng-if="!g.gamers[2]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[2]" src="/files/images/club2/empty.png"
                          class="nogamer gamer5">
-                    <img ng-if="g.gamers[2]" ng-src="{{g.gamers[2].headimgurl}}" class="gamer gamer5">
+                    <img ng-if="g.m[2]" ng-src="{{g.m[2].headimgurl}}" class="gamer gamer5">
 
-                    <img ng-if="!g.gamers[3]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[3]" src="/files/images/club2/empty.png"
                          class="nogamer gamer7">
-                    <img ng-if="g.gamers[3]" ng-src="{{g.gamers[3].headimgurl}}" class="gamer gamer7">
+                    <img ng-if="g.m[3]" ng-src="{{g.m[3].headimgurl}}" class="gamer gamer7">
 
-                    <img ng-if="!g.gamers[4]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[4]" src="/files/images/club2/empty.png"
                          class="nogamer gamer9">
-                    <img ng-if="g.gamers[4]" ng-src="{{g.gamers[4].headimgurl}}" class="gamer gamer9">
+                    <img ng-if="g.m[4]" ng-src="{{g.m[4].headimgurl}}" class="gamer gamer9">
 
-                    <img ng-if="!g.gamers[5]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[5]" src="/files/images/club2/empty.png"
                          class="nogamer gamer10">
-                    <img ng-if="g.gamers[5]" ng-src="{{g.gamers[5].headimgurl}}" class="gamer gamer10">
+                    <img ng-if="g.m[5]" ng-src="{{g.m[5].headimgurl}}" class="gamer gamer10">
 
-                    <img ng-if="!g.gamers[6]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[6]" src="/files/images/club2/empty.png"
                          class="nogamer gamer12">
-                    <img ng-if="g.gamers[6]" ng-src="{{g.gamers[6].headimgurl}}" class="gamer gamer12">
+                    <img ng-if="g.m[6]" ng-src="{{g.m[6].headimgurl}}" class="gamer gamer12">
 
-                    <img ng-if="!g.gamers[7]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[7]" src="/files/images/club2/empty.png"
                          class="nogamer gamer13">
-                    <img ng-if="g.gamers[7]" ng-src="{{g.gamers[7].headimgurl}}" class="gamer gamer13">
+                    <img ng-if="g.m[7]" ng-src="{{g.m[7].headimgurl}}" class="gamer gamer13">
 
-                    <img ng-if="!g.gamers[8]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[8]" src="/files/images/club2/empty.png"
                          class="nogamer gamer15">
-                    <img ng-if="g.gamers[8]" ng-src="{{g.gamers[8].headimgurl}}" class="gamer gamer15">
+                    <img ng-if="g.m[8]" ng-src="{{g.m[8].headimgurl}}" class="gamer gamer15">
 
-                    <img ng-if="!g.gamers[9]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[9]" src="/files/images/club2/empty.png"
                          class="nogamer gamer17">
-                    <img ng-if="g.gamers[9]" ng-src="{{g.gamers[9].headimgurl}}" class="gamer gamer17">
+                    <img ng-if="g.m[9]" ng-src="{{g.m[9].headimgurl}}" class="gamer gamer17">
 
                 </div>
                 <div class="game-num" ng-if="g.max_count!=''&&g.max_count==12">
-                    <img ng-if="!g.gamers[0]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[0]" src="/files/images/club2/empty.png"
                          class="nogamer gamer1" style="top: 6%;left: 20%;">
-                    <img ng-if="g.gamers[0]" ng-src="{{g.gamers[0].headimgurl}}" class="gamer gamer1">
+                    <img ng-if="g.m[0]" ng-src="{{g.m[0].headimgurl}}" class="gamer gamer1">
 
-                    <img ng-if="!g.gamers[1]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[1]" src="/files/images/club2/empty.png"
                          class="nogamer gamer2" style="left: 40%;">
-                    <img ng-if="g.gamers[1]" ng-src="{{g.gamers[1].headimgurl}}" class="gamer gamer2">
+                    <img ng-if="g.m[1]" ng-src="{{g.m[1].headimgurl}}" class="gamer gamer2">
 
-                    <img ng-if="!g.gamers[2]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[2]" src="/files/images/club2/empty.png"
                          class="nogamer gamer3" style="top: 6%;right: 20%;">
-                    <img ng-if="g.gamers[2]" ng-src="{{g.gamers[2].headimgurl}}" class="gamer gamer3">
+                    <img ng-if="g.m[2]" ng-src="{{g.m[2].headimgurl}}" class="gamer gamer3">
 
-                    <img ng-if="!g.gamers[3]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[3]" src="/files/images/club2/empty.png"
                          class="nogamer gamer5">
-                    <img ng-if="g.gamers[3]" ng-src="{{g.gamers[3].headimgurl}}" class="gamer gamer5">
+                    <img ng-if="g.m[3]" ng-src="{{g.m[3].headimgurl}}" class="gamer gamer5">
 
-                    <img ng-if="!g.gamers[4]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[4]" src="/files/images/club2/empty.png"
                          class="nogamer gamer7">
-                    <img ng-if="g.gamers[4]" ng-src="{{g.gamers[4].headimgurl}}" class="gamer gamer7">
+                    <img ng-if="g.m[4]" ng-src="{{g.m[4].headimgurl}}" class="gamer gamer7">
 
-                    <img ng-if="!g.gamers[5]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[5]" src="/files/images/club2/empty.png"
                          class="nogamer gamer9">
-                    <img ng-if="g.gamers[5]" ng-src="{{g.gamers[5].headimgurl}}" class="gamer gamer9">
+                    <img ng-if="g.m[5]" ng-src="{{g.m[5].headimgurl}}" class="gamer gamer9">
 
-                    <img ng-if="!g.gamers[6]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[6]" src="/files/images/club2/empty.png"
                          class="nogamer gamer10">
-                    <img ng-if="g.gamers[6]" ng-src="{{g.gamers[6].headimgurl}}" class="gamer gamer10">
+                    <img ng-if="g.m[6]" ng-src="{{g.m[6].headimgurl}}" class="gamer gamer10">
 
-                    <img ng-if="!g.gamers[7]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[7]" src="/files/images/club2/empty.png"
                          class="nogamer gamer11">
-                    <img ng-if="g.gamers[7]" ng-src="{{g.gamers[7].headimgurl}}" class="gamer gamer11">
+                    <img ng-if="g.m[7]" ng-src="{{g.m[7].headimgurl}}" class="gamer gamer11">
 
-                    <img ng-if="!g.gamers[8]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[8]" src="/files/images/club2/empty.png"
                          class="nogamer gamer12">
-                    <img ng-if="g.gamers[8]" ng-src="{{g.gamers[8].headimgurl}}" class="gamer gamer12">
+                    <img ng-if="g.m[8]" ng-src="{{g.m[8].headimgurl}}" class="gamer gamer12">
 
-                    <img ng-if="!g.gamers[9]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[9]" src="/files/images/club2/empty.png"
                          class="nogamer gamer13">
-                    <img ng-if="g.gamers[9]" ng-src="{{g.gamers[9].headimgurl}}" class="gamer gamer13">
+                    <img ng-if="g.m[9]" ng-src="{{g.m[9].headimgurl}}" class="gamer gamer13">
 
-                    <img ng-if="!g.gamers[10]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[10]" src="/files/images/club2/empty.png"
                          class="nogamer gamer15">
-                    <img ng-if="g.gamers[10]" ng-src="{{g.gamers[10].headimgurl}}" class="gamer gamer15">
+                    <img ng-if="g.m[10]" ng-src="{{g.m[10].headimgurl}}" class="gamer gamer15">
 
-                    <img ng-if="!g.gamers[11]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[11]" src="/files/images/club2/empty.png"
                          class="nogamer gamer17">
-                    <img ng-if="g.gamers[11]" ng-src="{{g.gamers[11].headimgurl}}" class="gamer gamer17">
+                    <img ng-if="g.m[11]" ng-src="{{g.m[11].headimgurl}}" class="gamer gamer17">
 
                 </div>
                 <div class="game-num" ng-if="g.max_count!=''&&g.max_count==13">
-                    <img ng-if="!g.gamers[0]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[0]" src="/files/images/club2/empty.png"
                          class="nogamer gamer2">
-                    <img ng-if="g.gamers[0]" ng-src="{{g.gamers[0].headimgurl}}" class="gamer gamer2">
+                    <img ng-if="g.m[0]" ng-src="{{g.m[0].headimgurl}}" class="gamer gamer2">
 
-                    <img ng-if="!g.gamers[1]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[1]" src="/files/images/club2/empty.png"
                          class="nogamer gamer3">
-                    <img ng-if="g.gamers[1]" ng-src="{{g.gamers[1].headimgurl}}" class="gamer gamer3">
+                    <img ng-if="g.m[1]" ng-src="{{g.m[1].headimgurl}}" class="gamer gamer3">
 
-                    <img ng-if="!g.gamers[2]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[2]" src="/files/images/club2/empty.png"
                          class="nogamer gamer5">
-                    <img ng-if="g.gamers[2]" ng-src="{{g.gamers[2].headimgurl}}" class="gamer gamer4">
+                    <img ng-if="g.m[2]" ng-src="{{g.m[2].headimgurl}}" class="gamer gamer4">
 
-                    <img ng-if="!g.gamers[3]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[3]" src="/files/images/club2/empty.png"
                          class="nogamer gamer6">
-                    <img ng-if="g.gamers[3]" ng-src="{{g.gamers[3].headimgurl}}" class="gamer gamer6">
+                    <img ng-if="g.m[3]" ng-src="{{g.m[3].headimgurl}}" class="gamer gamer6">
 
-                    <img ng-if="!g.gamers[4]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[4]" src="/files/images/club2/empty.png"
                          class="nogamer gamer7">
-                    <img ng-if="g.gamers[4]" ng-src="{{g.gamers[4].headimgurl}}" class="gamer gamer7">
+                    <img ng-if="g.m[4]" ng-src="{{g.m[4].headimgurl}}" class="gamer gamer7">
 
-                    <img ng-if="!g.gamers[5]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[5]" src="/files/images/club2/empty.png"
                          class="nogamer gamer8">
-                    <img ng-if="g.gamers[5]" ng-src="{{g.gamers[5].headimgurl}}" class="gamer gamer8">
+                    <img ng-if="g.m[5]" ng-src="{{g.m[5].headimgurl}}" class="gamer gamer8">
 
-                    <img ng-if="!g.gamers[6]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[6]" src="/files/images/club2/empty.png"
                          class="nogamer gamer10">
-                    <img ng-if="g.gamers[6]" ng-src="{{g.gamers[6].headimgurl}}" class="gamer gamer9">
+                    <img ng-if="g.m[6]" ng-src="{{g.m[6].headimgurl}}" class="gamer gamer9">
 
-                    <img ng-if="!g.gamers[7]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[7]" src="/files/images/club2/empty.png"
                          class="nogamer gamer11">
-                    <img ng-if="g.gamers[7]" ng-src="{{g.gamers[7].headimgurl}}" class="gamer gamer10">
+                    <img ng-if="g.m[7]" ng-src="{{g.m[7].headimgurl}}" class="gamer gamer10">
 
-                    <img ng-if="!g.gamers[8]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[8]" src="/files/images/club2/empty.png"
                          class="nogamer gamer12">
-                    <img ng-if="g.gamers[8]" ng-src="{{g.gamers[8].headimgurl}}" class="gamer gamer11">
+                    <img ng-if="g.m[8]" ng-src="{{g.m[8].headimgurl}}" class="gamer gamer11">
 
-                    <img ng-if="!g.gamers[9]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[9]" src="/files/images/club2/empty.png"
                          class="nogamer gamer14">
-                    <img ng-if="g.gamers[9]" ng-src="{{g.gamers[9].headimgurl}}" class="gamer gamer14">
+                    <img ng-if="g.m[9]" ng-src="{{g.m[9].headimgurl}}" class="gamer gamer14">
 
-                    <img ng-if="!g.gamers[10]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[10]" src="/files/images/club2/empty.png"
                          class="nogamer gamer15">
-                    <img ng-if="g.gamers[10]" ng-src="{{g.gamers[10].headimgurl}}" class="gamer gamer15">
+                    <img ng-if="g.m[10]" ng-src="{{g.m[10].headimgurl}}" class="gamer gamer15">
 
-                    <img ng-if="!g.gamers[11]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[11]" src="/files/images/club2/empty.png"
                          class="nogamer gamer16">
-                    <img ng-if="g.gamers[11]" ng-src="{{g.gamers[11].headimgurl}}" class="gamer gamer16">
+                    <img ng-if="g.m[11]" ng-src="{{g.m[11].headimgurl}}" class="gamer gamer16">
 
-                    <img ng-if="!g.gamers[12]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[12]" src="/files/images/club2/empty.png"
                          class="nogamer gamer17">
-                    <img ng-if="g.gamers[12]" ng-src="{{g.gamers[12].headimgurl}}" class="gamer gamer17">
+                    <img ng-if="g.m[12]" ng-src="{{g.m[12].headimgurl}}" class="gamer gamer17">
 
                 </div>
                 <div class="game-num" ng-if="g.max_count!=''&&g.max_count==15">
 
-                    <img ng-if="!g.gamers[0]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[0]" src="/files/images/club2/empty.png"
                          class="nogamer gamer2">
-                    <img ng-if="g.gamers[0]" ng-src="{{g.gamers[0].headimgurl}}" class="gamer gamer2">
+                    <img ng-if="g.m[0]" ng-src="{{g.m[0].headimgurl}}" class="gamer gamer2">
 
-                    <img ng-if="!g.gamers[1]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[1]" src="/files/images/club2/empty.png"
                          class="nogamer gamer3">
-                    <img ng-if="g.gamers[1]" ng-src="{{g.gamers[1].headimgurl}}" class="gamer gamer3">
+                    <img ng-if="g.m[1]" ng-src="{{g.m[1].headimgurl}}" class="gamer gamer3">
 
-                    <img ng-if="!g.gamers[2]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[2]" src="/files/images/club2/empty.png"
                          class="nogamer gamer5">
-                    <img ng-if="g.gamers[2]" ng-src="{{g.gamers[2].headimgurl}}" class="gamer gamer5">
+                    <img ng-if="g.m[2]" ng-src="{{g.m[2].headimgurl}}" class="gamer gamer5">
 
-                    <img ng-if="!g.gamers[3]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[3]" src="/files/images/club2/empty.png"
                          class="nogamer gamer6">
-                    <img ng-if="g.gamers[3]" ng-src="{{g.gamers[3].headimgurl}}" class="gamer gamer6">
+                    <img ng-if="g.m[3]" ng-src="{{g.m[3].headimgurl}}" class="gamer gamer6">
 
-                    <img ng-if="!g.gamers[4]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[4]" src="/files/images/club2/empty.png"
                          class="nogamer gamer7">
-                    <img ng-if="g.gamers[4]" ng-src="{{g.gamers[4].headimgurl}}" class="gamer gamer7">
+                    <img ng-if="g.m[4]" ng-src="{{g.m[4].headimgurl}}" class="gamer gamer7">
 
-                    <img ng-if="!g.gamers[5]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[5]" src="/files/images/club2/empty.png"
                          class="nogamer gamer8">
-                    <img ng-if="g.gamers[5]" ng-src="{{g.gamers[5].headimgurl}}" class="gamer gamer8">
+                    <img ng-if="g.m[5]" ng-src="{{g.m[5].headimgurl}}" class="gamer gamer8">
 
-                    <img ng-if="!g.gamers[6]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[6]" src="/files/images/club2/empty.png"
                          class="nogamer gamer9">
-                    <img ng-if="g.gamers[6]" ng-src="{{g.gamers[6].headimgurl}}" class="gamer gamer9">
+                    <img ng-if="g.m[6]" ng-src="{{g.m[6].headimgurl}}" class="gamer gamer9">
 
-                    <img ng-if="!g.gamers[7]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[7]" src="/files/images/club2/empty.png"
                          class="nogamer gamer10">
-                    <img ng-if="g.gamers[7]" ng-src="{{g.gamers[7].headimgurl}}" class="gamer gamer10">
+                    <img ng-if="g.m[7]" ng-src="{{g.m[7].headimgurl}}" class="gamer gamer10">
 
-                    <img ng-if="!g.gamers[8]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[8]" src="/files/images/club2/empty.png"
                          class="nogamer gamer11">
-                    <img ng-if="g.gamers[8]" ng-src="{{g.gamers[8].headimgurl}}" class="gamer gamer11">
+                    <img ng-if="g.m[8]" ng-src="{{g.m[8].headimgurl}}" class="gamer gamer11">
 
-                    <img ng-if="!g.gamers[9]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[9]" src="/files/images/club2/empty.png"
                          class="nogamer gamer12">
-                    <img ng-if="g.gamers[9]" ng-src="{{g.gamers[8].headimgurl}}" class="gamer gamer12">
+                    <img ng-if="g.m[9]" ng-src="{{g.m[8].headimgurl}}" class="gamer gamer12">
 
-                    <img ng-if="!g.gamers[10]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[10]" src="/files/images/club2/empty.png"
                          class="nogamer gamer13">
-                    <img ng-if="g.gamers[10]" ng-src="{{g.gamers[10].headimgurl}}" class="gamer gamer13">
+                    <img ng-if="g.m[10]" ng-src="{{g.m[10].headimgurl}}" class="gamer gamer13">
 
-                    <img ng-if="!g.gamers[11]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[11]" src="/files/images/club2/empty.png"
                          class="nogamer gamer14">
-                    <img ng-if="g.gamers[11]" ng-src="{{g.gamers[11].headimgurl}}" class="gamer gamer14">
+                    <img ng-if="g.m[11]" ng-src="{{g.m[11].headimgurl}}" class="gamer gamer14">
 
-                    <img ng-if="!g.gamers[12]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[12]" src="/files/images/club2/empty.png"
                          class="nogamer gamer15">
-                    <img ng-if="g.gamers[12]" ng-src="{{g.gamers[12].headimgurl}}" class="gamer gamer15">
+                    <img ng-if="g.m[12]" ng-src="{{g.m[12].headimgurl}}" class="gamer gamer15">
 
-                    <img ng-if="!g.gamers[13]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[13]" src="/files/images/club2/empty.png"
                          class="nogamer gamer16">
-                    <img ng-if="g.gamers[13]" ng-src="{{g.gamers[13].headimgurl}}" class="gamer gamer16">
+                    <img ng-if="g.m[13]" ng-src="{{g.m[13].headimgurl}}" class="gamer gamer16">
 
-                    <img ng-if="!g.gamers[14]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[14]" src="/files/images/club2/empty.png"
                          class="nogamer gamer17">
-                    <img ng-if="g.gamers[14]" ng-src="{{g.gamers[14].headimgurl}}" class="gamer gamer17">
+                    <img ng-if="g.m[14]" ng-src="{{g.m[14].headimgurl}}" class="gamer gamer17">
 
                 </div>
-                <div class="game-num" ng-if="g.max_count!=''&&g.max_count==17">
-                    <img ng-if="!g.gamers[0]" src="/files/images/club2/empty.png"
+                <div class="game-num" ng-if="g.max_count!=''&&g.max_count>=17">
+                    <img ng-if="!g.m[0]" src="/files/images/club2/empty.png"
                          class="nogamer gamer1">
-                    <img ng-if="g.gamers[0]" ng-src="{{g.gamers[0].headimgurl}}" class="gamer gamer1">
+                    <img ng-if="g.m[0]" ng-src="{{g.m[0].headimgurl}}" class="gamer gamer1">
 
-                    <img ng-if="!g.gamers[1]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[1]" src="/files/images/club2/empty.png"
                          class="nogamer gamer2">
-                    <img ng-if="g.gamers[1]" ng-src="{{g.gamers[1].headimgurl}}" class="gamer gamer2">
+                    <img ng-if="g.m[1]" ng-src="{{g.m[1].headimgurl}}" class="gamer gamer2">
 
-                    <img ng-if="!g.gamers[2]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[2]" src="/files/images/club2/empty.png"
                          class="nogamer gamer3">
-                    <img ng-if="g.gamers[2]" ng-src="{{g.gamers[2].headimgurl}}" class="gamer gamer3">
+                    <img ng-if="g.m[2]" ng-src="{{g.m[2].headimgurl}}" class="gamer gamer3">
 
-                    <img ng-if="!g.gamers[3]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[3]" src="/files/images/club2/empty.png"
                          class="nogamer gamer4">
-                    <img ng-if="g.gamers[3]" ng-src="{{g.gamers[3].headimgurl}}" class="gamer gamer4">
+                    <img ng-if="g.m[3]" ng-src="{{g.m[3].headimgurl}}" class="gamer gamer4">
 
-                    <img ng-if="!g.gamers[4]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[4]" src="/files/images/club2/empty.png"
                          class="nogamer gamer5">
-                    <img ng-if="g.gamers[4]" ng-src="{{g.gamers[4].headimgurl}}" class="gamer gamer5">
+                    <img ng-if="g.m[4]" ng-src="{{g.m[4].headimgurl}}" class="gamer gamer5">
 
-                    <img ng-if="!g.gamers[5]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[5]" src="/files/images/club2/empty.png"
                          class="nogamer gamer6">
-                    <img ng-if="g.gamers[5]" ng-src="{{g.gamers[5].headimgurl}}" class="gamer gamer6">
+                    <img ng-if="g.m[5]" ng-src="{{g.m[5].headimgurl}}" class="gamer gamer6">
 
-                    <img ng-if="!g.gamers[6]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[6]" src="/files/images/club2/empty.png"
                          class="nogamer gamer7">
-                    <img ng-if="g.gamers[6]" ng-src="{{g.gamers[6].headimgurl}}" class="gamer gamer7">
+                    <img ng-if="g.m[6]" ng-src="{{g.m[6].headimgurl}}" class="gamer gamer7">
 
-                    <img ng-if="!g.gamers[7]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[7]" src="/files/images/club2/empty.png"
                          class="nogamer gamer8">
-                    <img ng-if="g.gamers[7]" ng-src="{{g.gamers[7].headimgurl}}" class="gamer gamer8">
+                    <img ng-if="g.m[7]" ng-src="{{g.m[7].headimgurl}}" class="gamer gamer8">
 
-                    <img ng-if="!g.gamers[8]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[8]" src="/files/images/club2/empty.png"
                          class="nogamer gamer9">
-                    <img ng-if="g.gamers[8]" ng-src="{{g.gamers[8].headimgurl}}" class="gamer gamer9">
+                    <img ng-if="g.m[8]" ng-src="{{g.m[8].headimgurl}}" class="gamer gamer9">
 
-                    <img ng-if="!g.gamers[9]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[9]" src="/files/images/club2/empty.png"
                          class="nogamer gamer10">
-                    <img ng-if="g.gamers[9]" ng-src="{{g.gamers[9].headimgurl}}" class="gamer gamer10">
+                    <img ng-if="g.m[9]" ng-src="{{g.m[9].headimgurl}}" class="gamer gamer10">
 
-                    <img ng-if="!g.gamers[10]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[10]" src="/files/images/club2/empty.png"
                          class="nogamer gamer11">
-                    <img ng-if="g.gamers[10]" ng-src="{{g.gamers[10].headimgurl}}" class="gamer gamer11">
+                    <img ng-if="g.m[10]" ng-src="{{g.m[10].headimgurl}}" class="gamer gamer11">
 
-                    <img ng-if="!g.gamers[11]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[11]" src="/files/images/club2/empty.png"
                          class="nogamer gamer12">
-                    <img ng-if="g.gamers[11]" ng-src="{{g.gamers[11].headimgurl}}" class="gamer gamer12">
+                    <img ng-if="g.m[11]" ng-src="{{g.m[11].headimgurl}}" class="gamer gamer12">
 
-                    <img ng-if="!g.gamers[12]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[12]" src="/files/images/club2/empty.png"
                          class="nogamer gamer13">
-                    <img ng-if="g.gamers[12]" ng-src="{{g.gamers[12].headimgurl}}" class="gamer gamer13">
+                    <img ng-if="g.m[12]" ng-src="{{g.m[12].headimgurl}}" class="gamer gamer13">
 
-                    <img ng-if="!g.gamers[13]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[13]" src="/files/images/club2/empty.png"
                          class="nogamer gamer14">
-                    <img ng-if="g.gamers[13]" ng-src="{{g.gamers[13].headimgurl}}" class="gamer gamer14">
+                    <img ng-if="g.m[13]" ng-src="{{g.m[13].headimgurl}}" class="gamer gamer14">
 
-                    <img ng-if="!g.gamers[14]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[14]" src="/files/images/club2/empty.png"
                          class="nogamer gamer15">
-                    <img ng-if="g.gamers[14]" ng-src="{{g.gamers[14].headimgurl}}" class="gamer gamer15">
+                    <img ng-if="g.m[14]" ng-src="{{g.m[14].headimgurl}}" class="gamer gamer15">
 
-                    <img ng-if="!g.gamers[15]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[15]" src="/files/images/club2/empty.png"
                          class="nogamer gamer16">
-                    <img ng-if="g.gamers[15]" ng-src="{{g.gamers[15].headimgurl}}" class="gamer gamer16">
+                    <img ng-if="g.m[15]" ng-src="{{g.m[15].headimgurl}}" class="gamer gamer16">
 
-                    <img ng-if="!g.gamers[16]" src="/files/images/club2/empty.png"
+                    <img ng-if="!g.m[16]" src="/files/images/club2/empty.png"
                          class="nogamer gamer17">
-                    <img ng-if="g.gamers[16]" ng-src="{{g.gamers[16].headimgurl}}" class="gamer gamer17">
+                    <img ng-if="g.m[16]" ng-src="{{g.m[16].headimgurl}}" class="gamer gamer17">
 
                 </div>
             </div>
@@ -6320,25 +6397,6 @@
         </div>
     </div>
 
-    <div class="gameLayer" ng-show="createInfo.isShowContainer==1" ng-click="cancelGameContainer()"></div>
-    <div id="gameContainer" class="gameContainer"
-         style="background-image:url('../../../platform/{{globalData.hallEname}}/game_box.jpg')"
-         ng-show="createInfo.isShowContainer==1">
-        <div class="gameBox">
-            <div class="entrance" style="top:5%;">
-                <div class="img"
-                     style="background-image:url('../../../platform/{{globalData.hallEname}}/gameicon/icon_flowerjd.png')"
-                     ng-click="createFlower('jd')"></div>
-                <div class="img"
-                     style="background-image:url('../../../platform/{{globalData.hallEname}}/gameicon/icon_flower2.png')"
-                     ng-click="createFlower('big')"></div>
-                <div class="img"
-                     style="background-image:url('../../../platform/{{globalData.hallEname}}/gameicon/icon_flowerxp.png')"
-                     ng-click="createFlowerxp()"></div>
-                <!--                    <div class="img27 img" ng-click="createFlower('hp')"></div>-->
-            </div>
-        </div>
-    </div>
 
     <!-- 发送房卡 -->
     <div id="app-person">
@@ -6382,7 +6440,7 @@
                     </div>
                     <div class="name"
                          style="position: absolute;top:7vw;left: 14vw;height: 7vw;line-height: 7vw;overflow: hidden;color: #000;">
-                        ID：{{addMember.accountCode}}
+                        ID：{{addMember.userCode}}
                     </div>
                 </div>
                 <div class="button" style="position: absolute;top: 82vw;margin-top: 0;background-color: #6d7dd4;"
@@ -6784,8 +6842,32 @@
                  style="position: absolute;right: 0vw;top:2vw;width:20vw;z-index: 999;" ng-click="gotopage()">
         </div>
 
+    <div class="gameLayer" ng-show="createInfo.isShowContainer==1" ng-click="cancelGameContainer()"></div>
+    <div id="gameContainer" class="gameContainer"
+         style="background-image:url('../../../platform/{{globalData.hallEname}}/game_box.jpg')"
+         ng-show="createInfo.isShowContainer==1">
+        <div class="gameBox">
+            <div class="entrance" style="top:5%;">
+                <div class="img"
+                     style="background-image:url('../../../platform/{{globalData.hallEname}}/gameicon/icon_flowerjd.png')"
+                     ng-click="createFlower('jd')"></div>
+                <div class="img"
+                     style="background-image:url('../../../platform/{{globalData.hallEname}}/gameicon/icon_flower2.png')"
+                     ng-click="createFlower('big')"></div>
+                <div class="img"
+                     style="background-image:url('../../../platform/{{globalData.hallEname}}/gameicon/icon_flowerxp.png')"
+                     ng-click="createFlowerxp()"></div>
+                <!--                    <div class="img27 img" ng-click="createFlower('hp')"></div>-->
+            </div>
+        </div>
+    </div>
+
+
         <div class="entrance f-cb">
             <!--    三个牛牛     -->
+            <div class="img"
+                 style="background-image:url('../../../platform/{{globalData.hallEname}}/gameicon/icon_bull23.png')"
+                 ng-click="createBBullx(10)"></div>            
             <div class="img"
                  style="background-image:url('../../../platform/{{globalData.hallEname}}/gameicon/icon_bull21.png')"
                  ng-click="createBBullx(9)"></div>
@@ -6906,7 +6988,7 @@
                 </div>
                 <div class="name"
                      style="position: absolute;top:7vw;left: 14vw;height: 7vw;line-height: 7vw;overflow: hidden;color: #000;">
-                    ID：{{addMember.accountCode}}
+                    ID：{{addMember.userCode}}
                 </div>
             </div>
             <div class="button" style="position: absolute;top: 82vw;margin-top: 0;background-color: #6d7dd4;"
@@ -7219,26 +7301,21 @@
     </div>
 </div>
 
-<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script type="text/javascript">
-    //------css
-    DynLoading.css(ResourceUrl + 'files/css/loading.css?v=2');
-    DynLoading.css(ResourceUrl + 'files/css/alert.css?v=2');
-    DynLoading.css(ResourceUrl + 'files/css/page.css?v=2');
-    DynLoading.css(ResourceUrl + 'files/css/hall_yh2.css?v=2');
+<script type="text/javascript" src="/files/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/files/js/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="/files/js/angular.min.js"></script>
+<script type="text/javascript" src="/files/js/fastclick.js"></script>
+<script type="text/javascript" src="/files/js/jquery.marquee.min.js"></script>
+<script type="text/javascript" src="/files/js/clipboard.min.js"></script>
+<script type="text/javascript" src="/files/js/rem.js"></script>
+<script type="text/javascript" src="/fiesc/js/aes.js"></script>
+<script type="text/javascript" src="/files/js/md5.js"></script>	
+<script type="text/javascript" src="/js/load.js?v=11102"></script>
 
-    //------js
-    DynLoading.js(ResourceUrl + 'files/js/fastclick.js');
-    DynLoading.js(ResourceUrl + 'files/js/clipboard.min.js');
-    DynLoading.js(ResourceUrl + 'files/js/rem.js');
-    DynLoading.js(ResourceUrl + 'fiesc/js/aes.js');
-    DynLoading.js(ResourceUrl + 'files/js/md5.js');
+<script type="text/javascript">
+
 
     var Setting = {globalData: {}, userData: {}};
-    DynLoading.js(ResourceUrl + 'files/js/jquery-1.9.1.min.js', function () {
-        DynLoading.js(ResourceUrl + 'files/js/jquery.qrcode.min.js');
-        DynLoading.js(ResourceUrl + 'files/js/jquery.marquee.min.js');
-        DynLoading.js(ResourceUrl + 'files/js/angular.min.js', function () {
             var code = DynLoading.getUrlParam("code");
             let token = window.localStorage.getItem('token');
             if (!token) {
@@ -7253,11 +7330,11 @@
                         }
                     } else {
                         DynLoading.gotoWx();
-                        return;
+                        
                     }
                 } else {
                     DynLoading.goto('login');
-                    return;
+                    
                 }
             }
 
@@ -7274,7 +7351,6 @@
                 window.localStorage.removeItem('return_url');
                 window.localStorage.setItem('return_url', window.location.href);
                 DynLoading.goto('login');
-                return;
             }
             if (code && obj.data.tk != "") {
                 token = obj.data.tk;
@@ -7335,15 +7411,11 @@
                 new_userName = old_userNname;
             }
             document.getElementsByTagName("title")[0].innerText = new_userName + "|" + globalData.hallName;
-
-            DynLoading.js('/files/js/ves.js?v=1123');
-            DynLoading.js('/files/js/qrcode.js?v=1123');
-            DynLoading.js('/files/js/hall.js?v=112312');
-            DynLoading.js('/files/js/fuzhi.js?v=1123');
-        });
-    });
 </script>
-
+<script type="text/javascript" src="/files/js/ves.js?v=1123"></script>
+<script type="text/javascript" src="/files/js/hall.js?v=1123"></script>
+<script type="text/javascript" src="/files/js/qrcode.js?v=1123"></script>
+<script type="text/javascript" src="/files/js/fuzhi.js?v=1123"></script>
 <script>
     var bullSpendCard = [
         {
@@ -7355,7 +7427,8 @@
             6: '12局X8房卡',
             7: '12局X10房卡',
             8: '12局X12房卡',
-            9: '12局X15房卡'
+            9: '12局X15房卡',
+            10: '12局X18房卡'
         }, {
             1: '20局X4房卡',
             2: '24局X8房卡',
@@ -7365,7 +7438,8 @@
             6: '24局X16房卡',
             7: '24局X20房卡',
             8: '24局X24房卡',
-            9: '24局X30房卡'
+            9: '24局X30房卡',
+            10: '24局X36房卡'
         }
     ];
     var flowerSpendCard = [
